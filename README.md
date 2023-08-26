@@ -11,5 +11,13 @@ El funcionamento de este repositorio es en primera instancia la palabra , seguid
 ### pure  
 Palabra reservada para funciones,  pure nos dice que no solo no guarda datos dentro de la blockchain , sino que tampoco lee datos de la blockchain.
 
+```solidity
+\\ promete ni leer ni modificar datos
+
+  function add(uint i, uint j) public pure returns (uint) {
+        return i + j;
+    }
+```
+
 
 
