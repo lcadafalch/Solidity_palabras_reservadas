@@ -6,10 +6,10 @@ En caso de querer profundizar más, consultar la guía oficial https://solidity-
 ### DESCRIPCIÓN Y USO 
 El funcionamento de este repositorio es en primera instancia la palabra , seguido de la descripción de la misma, y luego un ejemplo de código para poder ver más claro.
 
-## Palabras reservadas
-Empecémos
-
  ## Modificadores/ modifiers
  
 ### pure  
+Palabra reservada para funciones,  pure nos dice que no solo no guarda datos dentro de la blockchain , sino que tampoco lee datos de la blockchain.
+
+
 
