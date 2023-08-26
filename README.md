@@ -9,4 +9,7 @@ El funcionamento de este repositorio es en primera instancia la palabra , seguid
 ## Palabras reservadas
 Empecémos
 
- ##
+ ## Modificadores/ modifiers
+ 
+### pure  
+
