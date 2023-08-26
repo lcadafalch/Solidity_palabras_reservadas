@@ -18,6 +18,13 @@ Palabra reservada para funciones,  pure nos dice que no solo no guarda datos den
         return i + j;
     }
 ```
+### view 
+Muy parecidad al modificador pure, en el caso de view , si que puede visualizar el estado de la blockchain , pero en ningún caso modificarla, las diferencias con "pure" es básicamente el hecho de que se puede visualizar
 
+//promete ni leer ni modificar datos
 
+  function add(uint i, uint j) public view returns (uint) {
+        return i + j;
+    }
+```
 
