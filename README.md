@@ -8,7 +8,7 @@ El funcionamento de este repositorio es en primera instancia la palabra , seguid
 
  ## Modificadores/ modifiers
  
-### pure  
+### pure  (funciones)
 Palabra reservada para funciones,  pure nos dice que no solo no guarda datos dentro de la blockchain , sino que tampoco lee datos de la blockchain.
 
 ```solidity
@@ -18,13 +18,18 @@ Palabra reservada para funciones,  pure nos dice que no solo no guarda datos den
         return i + j;
     }
 ```
-### view 
+### view (funciones)
 Muy parecidad al modificador pure, en el caso de view , si que puede visualizar el estado de la blockchain , pero en ningún caso modificarla, las diferencias con "pure" es básicamente el hecho de que se puede visualizar
 
 //promete ni leer ni modificar datos
-
+```solidity
   function add(uint i, uint j) public view returns (uint) {
         return i + j;
     }
 ```
+### payable ( funciones) 
 
+Palabra reservada que deja enviar Ether en la llamada, en caso de no tenerlo , no hay manera de hacer envíos de moneda de ningún tipo.
+```solidity
+    function deposit() public payable {}
+```
