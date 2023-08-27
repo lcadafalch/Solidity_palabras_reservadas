@@ -54,3 +54,16 @@ contract R2D2 is Droid {
     }
 }
 ```
+### constant (variables)
+Las constantes son variables que no se pueden modificar.
+En caso de tener una variable que no cambia de valor , es altamente recomendable usar constant , por el simple hecho de ahorrar Gas.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Constants {
+    // Siempre usando mayúsculas , siguiendo la regla
+    address public constant MY_ADDRESS = 0x777788889999AaAAbBbbCcccddDdeeeEfFFfCcCc;
+}
+```
