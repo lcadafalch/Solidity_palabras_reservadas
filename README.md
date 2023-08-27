@@ -67,3 +67,40 @@ contract Constants {
     address public constant MY_ADDRESS = 0x777788889999AaAAbBbbCcccddDdeeeEfFFfCcCc;
 }
 ```
+### immutable (variables)
+Una variable inmutable es una variable que apunta a un objeto y el valor del objeto no se puede cambiar, pero la variable se puede reasignar para que apunte a un nuevo objeto.
+Los inmutables son diferentes de las variables constantes, que deben tener un valor fijo en el momento de la compilación y deben asignarse donde se declara la variable. Las variables constantes no pueden acceder al almacenamiento o a los datos de blockchain, mientras que las variables inmutables sí pueden.
+Los inmutables se pueden utilizar para ahorrar costos de almacenamiento, ya que no requieren espacio de almacenamiento adicional para sus valores. Esto los hace útiles para almacenar valores como direcciones, hashes y otros datos que no necesitan cambiar con el tiempo. Además, los inmutables pueden ayudar a mejorar la legibilidad del código al facilitar la identificación de qué valores deben permanecer sin cambios durante la vigencia de un contrato.
+
+ ```solidity
+pragma solidity ^0.8.17;
+
+contract MyContract {
+    immutable uint public myNumber;
+
+// reasignable en el constructor
+
+    constructor(uint _myNumber) {
+        myNumber = _myNumber;
+    }
+}
+```
+
+### anonymous (Eventos)
+Para saber cómo tratar la keyword anonymous , hay que tener el cuenta que son los eventos, los eventos són básicamente logs para tener controlado eventos que pasan dentro de la blockchain, por ejemplo, que una address ha hecho una compra de más de 1 ethereum.
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract PaymentContract {
+    event PaymentReceived(address indexed sender, uint256 amount);
+
+    receive() external payable {
+        require(msg.value >= 1 ether, "You must send 1 ether");
+        emit PaymentReceived(msg.sender, msg.value);
+        
+        // Additional logic you might want to perform when receiving 1 ether.
+    }
+}
+```
+En este ejemplo se puede ver un evento que se ejecuta siempre que el usuario envíe un Ether o más.
