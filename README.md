@@ -34,7 +34,7 @@ Palabra reservada que deja enviar Ether en la llamada, en caso de no tenerlo , n
     function deposit() public payable {}
 ```
 
-### virtual (funciones y modificadores) y override
+### virtual y override (funciones y modificadores) 
 En este caso las trato de manera conjunta ya que , una depende de la otra.
 La palabra **virtual** se pone en funciones , y el funcionamiento que tiene es que en el de que esta función se pueda sobreescribir en el futuro, básicamente un contrate que herede de una función virtual
 si tiene la palabra reservada **override** se podra sobreescribir.
