@@ -104,3 +104,12 @@ contract PaymentContract {
 }
 ```
 En este ejemplo se puede ver un evento que se ejecuta siempre que el usuario envíe un Ether o más.
+
+## Variable BLOCK 
+En Solidity, la variable global block se refiere a un objeto que proporciona información sobre el bloque actual en el que se está ejecutando un contrato inteligente. Este objeto contiene una serie de propiedades y funciones que permiten acceder a información relevante sobre el bloque en cuestión.
+
+### blockhash(uint blockNumber) returns (bytes32)
+
+Esta función te permite obtener el hash de un bloque específico en la cadena de bloques de Ethereum, siempre y cuando el número de bloque proporcionado esté entre los 256 bloques más recientes.
+
+La función toma como argumento blockNumber, que es el número del bloque del cual deseas obtener el hash. Sin embargo, hay una limitación: solo puedes obtener el hash de los últimos 256 bloques. Si proporcionas un número de bloque que está más allá de los últimos 256 bloques, la función devolverá un valor de hash igual a cero.
