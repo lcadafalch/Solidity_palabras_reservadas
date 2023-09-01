@@ -143,7 +143,7 @@ Devuelve la cantidad de gas que no se ha usado, la que resta
 
 ## TRABAJANDO CON ADDRESS
 
-#### <address>.balance (uint256)
+#### address.balance (uint256)
 
 Devuelve el balance en wei
 
@@ -161,4 +161,19 @@ contract test {
 ```
 
 
+#### address.code(bytes memory)
 
+Devuelve el código de la dirección , en caso de ser una EOA , será vacío
+```solidity
+contract test {
+        address myAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4; 
+        bytes balance = myAddress.code;
+
+        function getBalance() public view returns (bytes memory) {
+            return balance;
+        }
+}
+```
+
+#### address.codehash (bytes32)
+el código hasheado de la dirección en cuestión.
