@@ -140,3 +140,25 @@ Bloque actual con el tiempo en timestamp en segundos
 
 ## gasleft()returns (uint256): 
 Devuelve la cantidad de gas que no se ha usado, la que resta
+
+## TRABAJANDO CON ADDRESS
+
+#### <address>.balance (uint256)
+
+Devuelve el balance en wei
+
+```solidity
+// ejemplo de uso
+contract test {
+        address myAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4; 
+        uint256 balance = myAddress.balance;
+
+        function getBalance() public view returns (uint256) {
+            return balance;
+        }
+}
+
+```
+
+
+
