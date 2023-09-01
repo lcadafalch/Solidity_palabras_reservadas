@@ -177,3 +177,11 @@ contract test {
 
 #### address.codehash (bytes32)
 el código hasheado de la dirección en cuestión.
+
+### address payable.transfer(uint256 amount)
+Transfiere wei a la wallet en cuestión, desenvuelve 2300 weis de gasto, se revierte si falla.
+
+### address .call(bytes memory) returns (bool, bytes memory)
+Transfiere wei a la wallet en cuestión, desenvuelve 2300 weis de gasto, devuelve falso si falla.
+
+
