@@ -118,4 +118,11 @@ La función toma como argumento blockNumber, que es el número del bloque del cu
 tarifa base del bloque actual partido por la base de https://eips.ethereum.org/EIPS/eip-3198 y https://eips.ethereum.org/EIPS/eip-1559, si se leen las especificaciones, se puede comprender más a fondo el funcionamiento básico de este.
 
 ### block.chainid (uint):
-Devuelve un entero que es el ID de la cadena de bloques, para ver los ID , puedes revisar https://chainlist.org/ 
+Devuelve un entero que es el ID de la cadena de bloques, para ver los ID , puedes revisar https://chainlist.org/.
+
+### block.coinbase (address payable):
+la billetera del minero que hace la mineria de ese bloque.
+
+### block.difficulty (uint):
+La dificultad que tiene el bloque actual.
+
