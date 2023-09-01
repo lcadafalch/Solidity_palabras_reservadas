@@ -126,3 +126,17 @@ la billetera del minero que hace la mineria de ese bloque.
 ### block.difficulty (uint):
 La dificultad que tiene el bloque actual.
 
+### block.gaslimit (uint):
+EL límite máximo de gas del bloque actual.
+
+### block.number (uint): 
+El número del bloque actual, desde respecto el genesis, 0.
+
+### block.prevrandao (uint):
+numero pseudorandom que se genera a partir de la beacon chain, no es un numero aleatorio, porque viene fundado a través del bloque actual.
+
+### block.timestamp (uint):
+Bloque actual con el tiempo en timestamp en segundos
+
+## gasleft()returns (uint256): 
+Devuelve la cantidad de gas que no se ha usado, la que resta
