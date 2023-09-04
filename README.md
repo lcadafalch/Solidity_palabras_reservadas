@@ -142,6 +142,7 @@ Bloque actual con el tiempo en timestamp en segundos
 Devuelve la cantidad de gas que no se ha usado, la que resta
 
 ## TRABAJANDO CON ADDRESS
+Address se refiere a la wallet
 
 #### address.balance (uint256)
 
@@ -183,6 +184,9 @@ Transfiere wei a la wallet en cuestión, desenvuelve 2300 weis de gasto, **se re
 
 #### address .call(bytes memory) returns (bool, bytes memory)
 Transfiere wei a la wallet en cuestión, desenvuelve 2300 weis de gasto, devuelve **falso** si falla.
+
+## VARIABLE MESSAGE
+Sobre el mensaje (wallet que envia , o que recibe)
 
 
 
