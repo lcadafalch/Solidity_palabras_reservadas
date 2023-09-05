@@ -188,6 +188,30 @@ Transfiere wei a la wallet en cuestión, desenvuelve 2300 weis de gasto, devuelv
 ## VARIABLE MESSAGE
 Sobre el mensaje (wallet que envia , o que recibe)
 
+### msg.data (bytes calldata): 
+Devuelve los datos del mensaje en forma de Hex una forma de visualización de los datos es la anterior
+
+```solidity
+contract C {
+    // in Remix, pass bytes as an array like: // ["0x00","0xaa", "0xff"]
+    function test(address addressOfD, bytes bb) {
+        addressOfD.call(bb);
+    }
+}
+
+contract D {
+    event LogMsgData(bytes calldata);
+
+    function() {
+        LogMsgData(msg.data);
+    }
+}
+```
+### msg.value (uint): 
+
+En este caso , devuelve la cantidad enviada ( en wei) de una cartera a otra. es decir 1 ether es (1 * 10^18 wei) 
+
+
 
 
 
