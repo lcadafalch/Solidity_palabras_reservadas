@@ -211,6 +211,21 @@ contract D {
 
 En este caso , devuelve la cantidad enviada ( en wei) de una cartera a otra. es decir 1 ether es (1 * 10^18 wei) 
 
+## VARIABLE TX, REFERENTE A LA TRANSACIÓN ACTUAL
+
+Palabra reservada referente a la transacción que encontramos:
+
+### tx.gasprice(uint)
+Referente al gasto total de gas de la transacción actual.
+
+### tx.origin(address)
+
+Tx.origin es una variable global en Solidity que devuelve la dirección de la cuenta de propiedad externa (EOA) original que inició la transacción. Es diferente de msg.sender, que devuelve la cuenta inmediata (cuenta externa o de contrato) que invocó cierta función.
+
+Si hay múltiples invocaciones de funciones a lo largo de diferentes contratos en cierta cadena de transacciones, tx.origin siempre se referirá al EOA que lo inició, sin importar la pila de contratos involucrados, mientras que msg.sender se referirá a la última instancia (EOA o smart contrato) desde el cual se llamó cada función en esa cadena de transacciones.
+
+Hay que conocer muy bien, la diferencia entre **tx.origin** y **msg.sender** para sobretodo el tema de propiedad.
+
 
 
 
