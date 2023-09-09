@@ -226,7 +226,7 @@ Si hay múltiples invocaciones de funciones a lo largo de diferentes contratos e
 
 Hay que conocer muy bien, la diferencia entre **tx.origin** y **msg.sender** para sobretodo el tema de propiedad.
 
-
+// Variables
 
 
 
